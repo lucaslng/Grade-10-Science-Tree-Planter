@@ -1,12 +1,12 @@
 input.onButtonPressed(Button.A, function () {
     cakLandServos.setServoPosition(cakLandServos.ServoPin.P0, cakLandServos.Position.MIDDLE)
     for (let index = 0; index < 4; index++) {
-        cakLandMotor.turnLeft(25)
+        cakLandMotor.turnLeft(-25)
         basic.pause(2000)
         cakLandMotor.stop()
-        cakLandServos.setServoPosition(cakLandServos.ServoPin.P0, cakLandServos.Position.HALF_DOWN)
-        basic.pause(500)
         cakLandServos.setServoPosition(cakLandServos.ServoPin.P0, cakLandServos.Position.MIDDLE)
+        basic.pause(500)
+        cakLandServos.setServoPosition(cakLandServos.ServoPin.P0, cakLandServos.Position.DOWN)
         seedsDropped += 1
     }
 })
